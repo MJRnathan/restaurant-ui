@@ -1,9 +1,11 @@
 
-import { PrismaClient } from "@prisma/client";
+// import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/utils/connect";
 import { NextResponse } from "next/server";
 
-const prisma = new PrismaClient();
-// Fetch All Catetories
+// const prisma = new PrismaClient()
+
+// Fetch All Categories
 export const GET = async() =>{
     try{
           const categories = await prisma.category.findMany();
